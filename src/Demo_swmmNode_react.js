@@ -26,7 +26,7 @@ const Demo_swmmNode_react = () => {
         <p>or just download this web page and study it:</p> 
         <p><a href='https://github.com/fileops/swmmNode_website_stormfinder'>https://github.com/fileops/swmmNode_website_stormfinder</a></p>
         <p>
-        You can also contact me at <strong>issac@swmmReact.org</strong>. Thanks so much for taking the time to stop by.
+        You can also contact me at <a href="mailto:email@example.com"><strong>issac@swmmReact.org</strong></a>. Thanks so much for taking the time to stop by.
         </p>
 
       <h2>Demo Controls</h2>
