@@ -19,6 +19,7 @@ function BaseInterface() {
   }
 
   const handleFileChange = event => {
+    setSwmmDat(null)
     const fileObj = event.target.files && event.target.files[0]
 
     if (!fileObj) return;

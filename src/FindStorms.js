@@ -10,10 +10,10 @@ const [IEP, setIEP] = useState(24)
 const [MSV, setMSV] = useState(0.1)
 
 useEffect(()=>{
-  setTargetRG(undefined)
 }, [swmmData])
 
 useEffect(()=>{
+  setOutText()
   let result = ''
   if(swmmData != null)
     result = processOut(swmmData)
@@ -86,7 +86,10 @@ function columnHeaders(columns) {
 if(outText)
   return (
     <>
-    <UniversalDropDown IDs={Object.keys(swmmData.contents)} onChange={setTargetRG} />
+    {
+      swmmData &&
+      <UniversalDropDown IDs={Object.keys(swmmData.contents)} onChange={setTargetRG} />
+    }
     
     <label>Inter-Event Period (hours): {IEP}
     <input  type = "range"
