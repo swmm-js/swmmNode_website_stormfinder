@@ -4,7 +4,7 @@ import { ComposedChart, Bar, Line, XAxis, YAxis,
   Legend, CartesianGrid, ResponsiveContainer, Tooltip } from "recharts"
 import { outputDataWords, outputDataUnitsWords } from "./swmm_core/wordsnKeys"
 import { rechartsFormatXDateAxis } from './swmmreact'
-import { colorSet01 } from "./swmmjs_module"
+import { colorSet01 } from "@fileops/swmm-node"
 
 // This is the new problem. I need to read the dataType from the
 // parent object, not write it to the parent object. This element
