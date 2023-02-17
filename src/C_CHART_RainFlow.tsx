@@ -1,5 +1,5 @@
 // C_CHART_RainFlow.tsx
-import { useState, useEffect } from "react"
+/*import { useState, useEffect } from "react"
 import { GetRainfall_func, GetStations_func, PointsToGeoJSON, SimplifyRainfall } from "./API_UKgovDataRaingages"
 import "./index.css"
 import { 
@@ -44,7 +44,6 @@ const C_CHART_RainFlow = ({inpModel, setInpModel, out, rpt, setRpt}:any) => {
   const [series, setSeries] = useState([])
 
   useEffect(() => {
-    {/* Get an array of raingages. */}
     GetStations_func ({
       parameter:'rainfall', 
       setStations:setRaingageList,
@@ -54,9 +53,7 @@ const C_CHART_RainFlow = ({inpModel, setInpModel, out, rpt, setRpt}:any) => {
       transformer:PointsToGeoJSON})
   }, [])
 
-  
   useEffect(() => {
-    {/* Get the data for the targetRainSensor */}
     GetRainfall_func({
     setRainfall:setRainfall, 
     stationID:targetRainSensor,
@@ -103,7 +100,6 @@ const C_CHART_RainFlow = ({inpModel, setInpModel, out, rpt, setRpt}:any) => {
 
   return (
     <>
-      {/* Create the rainfall/output combo chart. */}
       <RainFlowChartTime_Recharts
         rainfall={rainfall}
         outdir  ={outdir}
@@ -113,10 +109,6 @@ const C_CHART_RainFlow = ({inpModel, setInpModel, out, rpt, setRpt}:any) => {
         objNames={targetObjects}
         width={width} height={height} />
 
-      {/* Translate the array of raingages to mappable data */}
-      <PointsMap pointsData={raingageList} setTargetRainSensor={setTargetRainSensor} />
-
-      {/* Use a multiselect control to select object(s) to chart. */}
       <label htmlFor='node'>Link</label>
       <OUTLinksMultiSelect outdir={outdir}
         objectType={objectType}
@@ -125,4 +117,4 @@ const C_CHART_RainFlow = ({inpModel, setInpModel, out, rpt, setRpt}:any) => {
   )
 }
 
-export { C_CHART_RainFlow }
+export { C_CHART_RainFlow }*/

@@ -4,7 +4,7 @@
   "private": true,
   "homepage": ".",
   "dependencies": {
-    "@fileops/swmm-node": "^0.0.7",
+    "@fileops/swmm-node": "^0.0.8",
     "@swmm-js/swmm-node": "^0.0.6",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",

@@ -2,6 +2,7 @@
 
 import './App.css'
 import {useRef, useState} from 'react'
+import FindStorms from './FindStorms'
 import { SwmmDat } from "@fileops/swmm-node"
 
 function BaseInterface() {
@@ -29,14 +30,14 @@ function BaseInterface() {
       const res = e.target.result
       setSwmmDat(new SwmmDat(res))
     }
-    reader.readAsArrayBuffer(fileObj)
+    reader.readAsText(fileObj)
   }
 
   const handleDemoClick = event => {
     async function showFile () {
       // Read the output file
       const response = await fetch('./rg_data02.dat')
-      await response.arrayBuffer()
+      await response.text()
         .then((res)=>{
           setSwmmDat(new SwmmDat(res))
       })
@@ -57,7 +58,6 @@ function BaseInterface() {
           <button className='demoTabLink'style={{width: '50%', border: '3px solid gray'}} onClick={handleClick}>Select .dat file</button>
           <button className='demoTabLink'style={{width: '50%', border: '3px solid gray'}} onClick={handleDemoClick}>Use demo rg_data02.dat</button>
         </div>
-        <h3>.DAT display</h3>
         <FindStorms swmmData={swmmDat} />
       </header>
     </div>

@@ -6,18 +6,18 @@ import SyntaxHighlighter from 'react-syntax-highlighter'
 import { nightOwl as codeStyle } from 'react-syntax-highlighter/dist/esm/styles/hljs'
 import BaseInterface from './BaseInterface';
 /* eslint import/no-webpack-loader-syntax: off */
-const useDidMount = require('!!raw-loader!./DisplayOutAsText.js')
+const useDidMount = require('!!raw-loader!./FindStorms.js')
 
 const Demo_swmmNode_react = () => {
   return(
 <div >
 <SiteNavBar />
   <div >
-    <div style={UIBackground}><h1>Model Reporting: .DAT file storm identification</h1>
-      <p>This demo features swmmNode stirn detectuib. Click on the <strong>'Select .dat file'</strong> button to pick a <strong>.dat</strong> file and select a raingage. You can modify the inter-event period and the minimum storm volume to fine-tune the storm detection algorithm. Although this is a webpage, you can also use swmmNode via node.js and keep all your work on your desktop.
+    <div style={UIBackground}><h1>Model Reporting: Raingage .DAT file storm identification</h1>
+      <p>This demo features swmmNode storm detection. Click on the <strong>'Select .dat file'</strong> button to pick a <strong>.dat</strong> file and select a raingage. You can modify the inter-event period and the minimum storm volume to fine-tune the storm detection algorithm. If you prefer a desktop solution over a webpage, you can also use swmmNode via node.js and keep all your work on your desktop.
       </p>
       <p>
-        The format of a <strong>.dat</strong> file can be in different styles, but the format that works for this page is the raingage format. The timeseries format is best used with older versions of swmm-js, but swmmNode will soon be capable of TimeSeries storm detection.  You can find swmmNode compatible JavaScript below the translation, and you can always check out a copy of swmmNode for your own uses at the GitHub repo:
+        The format of a <strong>.dat</strong> file can be in different styles, but the format that works for this page is the raingage format. The TimeSeries format is best used with older versions of swmm-js, but swmmNode will soon be capable of TimeSeries storm detection.  You can find swmmNode compatible JavaScript below the list of detected storms, and you can always check out a copy of swmmNode for your own uses at the GitHub repo:
         </p>
         <p><a href='https://github.com/fileops/swmmNode'>https://github.com/fileops/swmmNode</a>
         </p> 

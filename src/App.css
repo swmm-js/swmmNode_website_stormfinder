@@ -146,8 +146,6 @@
   padding: 6px 12px;
   border: 1px solid #ccc;
   border-top: none;
-  -webkit-scrollbar: none;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
+  overflow:hidden;
 }
 
