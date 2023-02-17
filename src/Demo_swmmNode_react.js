@@ -13,18 +13,18 @@ const Demo_swmmNode_react = () => {
 <div >
 <SiteNavBar />
   <div >
-    <div style={UIBackground}><h1>Model Reporting: .OUT file text translation</h1>
-      <p>This demo features swmmNode model translation capabilities. Click on the <strong>'Select .out file'</strong> button to pick a <strong>.out</strong> file to translate to text. Keep in mind that web browsers can only handle so much memory, so if your <strong>.out</strong> file is very large, you may want to use swmmNode via node.js, or perform a serverside translation.
+    <div style={UIBackground}><h1>Model Reporting: .DAT file storm identification</h1>
+      <p>This demo features swmmNode stirn detectuib. Click on the <strong>'Select .dat file'</strong> button to pick a <strong>.dat</strong> file and select a raingage. You can modify the inter-event period and the minimum storm volume to fine-tune the storm detection algorithm. Although this is a webpage, you can also use swmmNode via node.js and keep all your work on your desktop.
       </p>
       <p>
-        The results are written out as closely as possible to the traditional <strong>.out</strong> file contents. I have made a few changes to improve readability.  You can find swmmNode compatible JavaScript below the translation, and you can always check out a copy of swmmNode for your own uses at the GitHub repo:
+        The format of a <strong>.dat</strong> file can be in different styles, but the format that works for this page is the raingage format. The timeseries format is best used with older versions of swmm-js, but swmmNode will soon be capable of TimeSeries storm detection.  You can find swmmNode compatible JavaScript below the translation, and you can always check out a copy of swmmNode for your own uses at the GitHub repo:
         </p>
-        <p><a href='https://github.com/swmm-js/swmmNode'>https://github.com/swmm-js/swmmNode</a>
+        <p><a href='https://github.com/fileops/swmmNode'>https://github.com/fileops/swmmNode</a>
         </p> 
         <p>or from npm: </p>
-        <p><a href='https://www.npmjs.com/package/@swmm-js/swmm-node'>https://www.npmjs.com/package/@swmm-js/swmm-node</a></p>
+        <p><a href='https://www.npmjs.com/package/@fileops/swmm-node'>https://www.npmjs.com/package/@fileops/swmm-node</a></p>
         <p>or just download this web page and study it:</p> 
-        <p><a href='https://github.com/swmm-js/swmmNode_website_stormfinder'>https://github.com/swmm-js/swmmNode_website_stormfinder</a></p>
+        <p><a href='https://github.com/fileops/swmmNode_website_stormfinder'>https://github.com/fileops/swmmNode_website_stormfinder</a></p>
         <p>
         You can also contact me at <strong>issac@swmmReact.org</strong>. Thanks so much for taking the time to stop by.
         </p>
@@ -33,7 +33,7 @@ const Demo_swmmNode_react = () => {
       <BaseInterface />
 
       <h2>Example swmmNode code</h2>
-      <p>The following code window displays an example way to use swmmNode to format and display .out file contents in text format.</p>
+      <p>The following code window displays an example way to use swmmNode to detect storm extents in .dat files.</p>
       <SyntaxHighlighter language='javascript' style={codeStyle} showLineNumbers={true}>
         {useDidMount.default.toString()}
       </SyntaxHighlighter>
