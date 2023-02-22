@@ -37,7 +37,7 @@ function BaseInterface() {
   const handleDemoClick = event => {
     async function showFile () {
       // Read the output file
-      const response = await fetch('./rg_data02.dat')
+      const response = await fetch('./3243177.dat')
       await response.text()
         .then((res)=>{
           setSwmmDat(new SwmmDat(res))
@@ -57,7 +57,7 @@ function BaseInterface() {
         />
         <div className='demoTab'>
           <button className='demoTabLink'style={{width: '50%', border: '3px solid gray'}} onClick={handleClick}>Select .dat file</button>
-          <button className='demoTabLink'style={{width: '50%', border: '3px solid gray'}} onClick={handleDemoClick}>Use demo rg_data02.dat</button>
+          <button className='demoTabLink'style={{width: '50%', border: '3px solid gray'}} onClick={handleDemoClick}>Use demo 3243177.dat</button>
         </div>
         <FindStorms swmmData={swmmDat} />
       </header>
