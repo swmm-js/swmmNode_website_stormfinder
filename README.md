@@ -1,2 +1,3 @@
-# swmmNode_website_stormfinder
- Basic example of a website that can use swmmNode to parse swmm .dat files and locate the storms within.
+# Getting started with TensorFlow in swmmNode and swmmWasm.
+
+This is a simple demo webpage for utilizing TensorFlow in swmmNode and swmmWasm. This page and the files within are not yet considered to be complete.

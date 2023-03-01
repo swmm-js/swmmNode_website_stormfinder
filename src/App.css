@@ -11,6 +11,12 @@
   }
 }
 
+.App {
+  max-height: 450px;
+  overflow: scroll;
+  margin-top: 15px;
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 200px;
@@ -146,6 +152,8 @@
   padding: 6px 12px;
   border: 1px solid #ccc;
   border-top: none;
-  overflow:hidden;
+  -webkit-scrollbar: none;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 

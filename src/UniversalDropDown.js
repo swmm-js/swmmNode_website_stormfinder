@@ -6,7 +6,7 @@ import "./index.css"
 // arr: Array of object that exist in the dropdown
 // controlModel: the model that is being updated if this control is changed.
 // objName: the name of the object to be updated in the controlModel object if this control is changed.
-const UniversalDropDown = ({ IDs, onChange=()=>{} }) => {
+const UniversalDropDown = ({ IDs, selectText, onChange=()=>{} }) => {
   const [selected, setSelected] = useState('none')
 
   // If the model changes, then 
@@ -29,7 +29,7 @@ const UniversalDropDown = ({ IDs, onChange=()=>{} }) => {
         value = {selected}
         onChange = {handleChange}
       >
-        <option value='none' disabled hidden>Select a Raingage</option>
+        <option value='none' disabled hidden>{selectText}</option>
         {
           IDs.map((k, i) => 
             <option className='UIparams' key={i} value={k}>{k}</option>
