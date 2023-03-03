@@ -10,7 +10,6 @@ const [IEP, setIEP] = useState(24)
 const [MSV, setMSV] = useState(0.1)
 
 useEffect(()=>{
-  console.log(targetRG)
   setOutText()
   let result = ''
   if(swmmData != null)
@@ -26,7 +25,6 @@ useEffect(()=>{
  * @returns {string} a formatted string that represents the storm events.
  */
 function processOut(swmmData) {
-  console.log(targetRG)
   if(targetRG !== undefined && swmmData.contents.get(targetRG) !== undefined){
     // Detect storm patterns using swmmNode
     let outJSON =
@@ -40,7 +38,6 @@ function processOut(swmmData) {
                     stringString(v.end, 24) + "\n"
       })
 
-      console.log(outString)
     return outString
   }
   else return ''
