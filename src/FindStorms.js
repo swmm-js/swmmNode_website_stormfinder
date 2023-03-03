@@ -10,6 +10,7 @@ const [IEP, setIEP] = useState(24)
 const [MSV, setMSV] = useState(0.1)
 
 useEffect(()=>{
+  console.log(targetRG)
   setOutText()
   let result = ''
   if(swmmData != null)
@@ -25,10 +26,11 @@ useEffect(()=>{
  * @returns {string} a formatted string that represents the storm events.
  */
 function processOut(swmmData) {
-  if(targetRG !== undefined && swmmData.contents[targetRG] !== undefined){
+  console.log(targetRG)
+  if(targetRG !== undefined && swmmData.contents.get(targetRG) !== undefined){
     // Detect storm patterns using swmmNode
     let outJSON =
-      swmmData.findStormsPretty(swmmData.contents[targetRG], 1000*60*60*IEP, MSV)
+      swmmData.findStormsPretty(swmmData.contents.get(targetRG), 1000*60*60*IEP, MSV)
     // Format the storm pattern JSON into readable output.
     let outString = 
       columnHeaders([['Event', 10], ['Start', 24], ['End', 24]])
@@ -38,6 +40,7 @@ function processOut(swmmData) {
                     stringString(v.end, 24) + "\n"
       })
 
+      console.log(outString)
     return outString
   }
   else return ''
@@ -115,7 +118,7 @@ if(outText)
 else return (
   <>
   { swmmData &&
-    <UniversalDropDown IDs={Object.keys(swmmData.contents)} onChange={setTargetRG} />
+    <UniversalDropDown IDs={Array.from(swmmData.contents.keys())} onChange={setTargetRG} />
   }
   </>
 )
