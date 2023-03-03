@@ -1,19 +1,22 @@
 {
-  "name": "swmmnode_website_stormfinder",
+  "name": "t01-tensorflow-chart",
   "version": "0.1.0",
   "private": true,
   "homepage": ".",
   "dependencies": {
-    "@fileops/swmm-node": "^0.0.8",
-    "@swmm-js/swmm-node": "^0.0.6",
+    "@fileops/swmm-node": "^0.0.16",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "chart.js": "^4.2.1",
+    "chartjs-adapter-moment": "^1.0.1",
+    "date-fns": "^2.29.3",
+    "moment": "^2.29.4",
     "react": "^18.2.0",
+    "react-chartjs-2": "^5.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
     "react-syntax-highlighter": "^15.5.0",
-    "recharts": "^2.4.3",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

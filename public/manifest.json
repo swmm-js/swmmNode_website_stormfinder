@@ -1,6 +1,6 @@
 {
-  "short_name": "swmmNode display example",
-  "name": "swmmNode parsing example",
+  "short_name": "t01 TensorFlow React swmmNode swmmWasm",
+  "name": "Demo page using TensorFlow, React, swmmNode, swmmWasm",
   "icons": [
     {
       "src": "favicon.ico",
