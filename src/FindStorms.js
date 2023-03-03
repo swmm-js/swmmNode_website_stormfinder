@@ -10,16 +10,12 @@ const [IEP, setIEP] = useState(24)
 const [MSV, setMSV] = useState(0.1)
 
 useEffect(()=>{
-}, [swmmData])
-
-useEffect(()=>{
   setOutText()
   let result = ''
   if(swmmData != null)
     result = processOut(swmmData)
   setOutText(result)
 }, [swmmData, targetRG, IEP, MSV])
-
 
 /**
  * Process the contents of a raingage .dat file
