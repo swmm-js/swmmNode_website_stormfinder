@@ -42,8 +42,6 @@ export function RainChartTime_D3({rg_data, startDate, endDate}) {
       for (let i = 0; i < keys.length; i = i + Math.ceil(falseStep)) {
         theDate = new Date(parseInt(keys[i]));
         if (theDate >= startDate && theDate <= endDate) {
-          console.log(startDate);
-          console.log(keys[i]);
           labelData.push(parseInt(keys[i]));
           rainData.push(newDat[keys[i]]);
         }

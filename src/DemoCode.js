@@ -64,11 +64,11 @@ function processOut(swmmData) {
   else return ''
 }
 
-if(swmmData)
+if(swmmData !== null)
   return (
     <>
     <div style={{height: "300px"}}>
-      <RainChartTime_Chartjs rg_data={swmmData.contents.get(targetRG)} startDate={startDate} endDate={endDate} />
+      {<RainChartTime_Chartjs rg_data={swmmData.contents.get(targetRG)} startDate={startDate} endDate={endDate} />}
     </div>
  
     {<UniversalDropDown selectText={"Select a Raingage"} IDs={ Array.from(swmmData.contents.keys()) } onChange={setTargetRG} /> }

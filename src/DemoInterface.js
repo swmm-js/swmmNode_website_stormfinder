@@ -73,7 +73,7 @@ function DemoInterface() {
     const reader = new FileReader()
     reader.onload = (e) => {
       const res = e.target.result
-      setSwmmDat(res)
+      setSwmmDat(new SwmmDat(res))
     }
     reader.readAsText(fileObj)
   }
