@@ -73,7 +73,14 @@ function DemoInterface() {
     const reader = new FileReader()
     reader.onload = (e) => {
       const res = e.target.result
-      setSwmmDat(new SwmmDat(res))
+      try {
+        const fileToObj = new SwmmDat(res)
+        setSwmmDat(fileToObj)
+      } catch(error)
+      {
+        alert('File is not in expected format')
+        throw new Error("File is not in expected format.")
+      }
     }
     reader.readAsText(fileObj)
   }

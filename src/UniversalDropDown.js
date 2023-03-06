@@ -7,13 +7,13 @@ import "./index.css"
 // controlModel: the model that is being updated if this control is changed.
 // objName: the name of the object to be updated in the controlModel object if this control is changed.
 const UniversalDropDown = ({ IDs, selectText, onChange=()=>{} }) => {
-  const [selected, setSelected] = useState('none')
+  const [selected, setSelected] = useState('')
 
   // If the model changes, then 
   // the displayed value must also change
   // Adjust for cases where val is null.
   useEffect(() => {
-    setSelected('none')
+    setSelected('')
     onChange(undefined)
   }, [])
 
@@ -29,7 +29,7 @@ const UniversalDropDown = ({ IDs, selectText, onChange=()=>{} }) => {
         value = {selected}
         onChange = {handleChange}
       >
-        <option value='none' disabled hidden>{selectText}</option>
+        <option hidden>{selectText}</option>
         {
           IDs.map((k, i) => 
             <option className='UIparams' key={i} value={k}>{k}</option>

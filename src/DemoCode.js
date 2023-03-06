@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react"
 import { UniversalDropDown } from "./UniversalDropDown"
 import { RainChartTime_Chartjs } from './RainChartTime_Chartjs'
+import { SwmmDat } from "@fileops/swmm-node"
 import moment from 'moment'
 import './DemoCode.css'
 
@@ -33,7 +34,7 @@ useEffect(()=>{
 }, [swmmData, targetRG, IEP, MSV])
 
 useEffect(()=>{
-  if(swmmData !== undefined && targetRG !== undefined){
+  if(swmmData !== undefined && targetRG !== undefined && swmmData.contents.get(targetRG)){
     // Automatically detect the date extents of the file.
     let keys = Array.from(swmmData.contents.get(targetRG).keys())
     let length = keys.length
@@ -59,7 +60,7 @@ useEffect(()=>{
 function processOut(swmmData) {
   if(targetRG !== undefined && swmmData.contents.get(targetRG) !== undefined){
     // Detect storm patterns using swmmNode
-    setOutJSON(swmmData.findStorms(swmmData.contents.get(targetRG), 1000*60*60*IEP, MSV))
+    setOutJSON(SwmmDat.findStorms(swmmData.contents.get(targetRG), 1000*60*60*IEP, MSV))
   }
   else return ''
 }
