@@ -34,7 +34,7 @@ useEffect(()=>{
 }, [swmmData, targetRG, IEP, MSV])
 
 useEffect(()=>{
-  if(swmmData !== undefined && targetRG !== undefined){
+  if(swmmData !== undefined && targetRG !== undefined && swmmData.contents.get(targetRG)){
     // Automatically detect the date extents of the file.
     let keys = Array.from(swmmData.contents.get(targetRG).keys())
     let length = keys.length

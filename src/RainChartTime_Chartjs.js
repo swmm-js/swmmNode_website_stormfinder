@@ -83,6 +83,11 @@ export function RainChartTime_Chartjs({rg_data, startDate, endDate}) {
       setLabels(labelData)
       setRainfall(rainData)
     }
+    // If the rainfall data had been changed or there
+    // is no raingage data, reset the rainfall data
+    else{
+      setRainfall([])
+    }
   },[rg_data, startDate, endDate])
 
   const data = {
