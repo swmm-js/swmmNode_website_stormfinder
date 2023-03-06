@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react"
 import { UniversalDropDown } from "./UniversalDropDown"
 import { RainChartTime_Chartjs } from './RainChartTime_Chartjs'
+import { SwmmDat } from "@fileops/swmm-node"
 import moment from 'moment'
 import './DemoCode.css'
 
@@ -59,7 +60,7 @@ useEffect(()=>{
 function processOut(swmmData) {
   if(targetRG !== undefined && swmmData.contents.get(targetRG) !== undefined){
     // Detect storm patterns using swmmNode
-    setOutJSON(swmmData.findStorms(swmmData.contents.get(targetRG), 1000*60*60*IEP, MSV))
+    setOutJSON(SwmmDat.findStorms(swmmData.contents.get(targetRG), 1000*60*60*IEP, MSV))
   }
   else return ''
 }
